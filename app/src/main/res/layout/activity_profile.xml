@@ -21,10 +21,10 @@
             android:layout_height="125dp" />
 
         <TextView
-            android:id="@+id/txtCustomerName"
+            android:id="@+id/strCustomerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Customer First Name, Middle Names, Last Name"
+            android:text="@string/customer_first_name_middle_names_last_name"
             android:textAlignment="textStart"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -52,12 +52,18 @@
                     android:id="@+id/txtUsername"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="(Username)" />
+                    android:autofillHints="username"
+                    android:inputType="text"
+                    android:text="@string/username"
+                    tools:ignore="LabelFor" />
                 <EditText
                     android:id="@+id/txtCustomerName"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="(CustomerName)" />
+                    android:text="@string/customer_name"
+                    android:autofillHints="Full Name"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/txtDOB"
@@ -65,7 +71,9 @@
                     android:layout_height="50dp"
                     android:ems="10"
                     android:inputType="date"
-                    android:text="Date of Birth" />
+                    android:text="@string/date_of_birth"
+                    android:autofillHints="Date of Birth"
+                    tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/txtPhone"
@@ -73,13 +81,18 @@
                     android:layout_height="50dp"
                     android:ems="10"
                     android:inputType="phone"
-                    android:text="(Set Phone Number)" />
+                    android:text="@string/set_phone_number"
+                    android:autofillHints="Phone Number"
+                    tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/txtSNS"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="(Set Social Media Acct.)" />
+                    android:text="@string/set_social_media_acct"
+                    android:autofillHints="Connect to a Social Networking Site"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/txtEmail"
@@ -87,7 +100,9 @@
                     android:layout_height="50dp"
                     android:ems="10"
                     android:inputType="textEmailAddress"
-                    android:text="(Set Email)" />
+                    android:text="@string/set_email"
+                    android:autofillHints="Fill in email"
+                    tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/txtPassword"
@@ -95,7 +110,9 @@
                     android:layout_height="50dp"
                     android:ems="10"
                     android:inputType="textPassword"
-                    android:text="(Change Password)" />
+                    android:text="@string/change_password"
+                    android:autofillHints="Change Password"
+                    tools:ignore="LabelFor" />
             </LinearLayout>
         </ScrollView>
         <Space
@@ -108,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
-            android:text="Edit Profile" />
+            android:text="@string/confirm_changes" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
