@@ -18,7 +18,7 @@ public class ListAdapter  {
         this.title = title;
     }
 
-    public String getTime_stamp() {
+    public String getTime() {
         return time_stamp;
     }
 

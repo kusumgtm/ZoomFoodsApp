@@ -28,7 +28,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.waterAmount.setText(items.get(position).getAmount());
-        holder.timestamp.setText(items.get(position).getTime_stamp());
+        holder.timestamp.setText(items.get(position).getTime());
     }
 
     @Override

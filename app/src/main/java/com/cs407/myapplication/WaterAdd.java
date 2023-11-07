@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -27,13 +28,16 @@ import androidx.appcompat.widget.AppCompatSeekBar;
 import com.cs407.myapplication.R.layout;
 
 import java.sql.Time;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class WaterAdd extends AppCompatActivity {
     AppCompatSeekBar seekBar;
     EditText amountNumb;
+    EditText drink_title;
     ImageView pencil_btn;
     TextView time_view;
+    ImageView add_btn;
     /*
     *  Update the seekbar based on users's input
     * */
@@ -54,6 +58,8 @@ public class WaterAdd extends AppCompatActivity {
         amountNumb = findViewById(R.id.number);
         pencil_btn = findViewById(R.id.pencil);
         time_view = findViewById(R.id.time_button);
+        add_btn = findViewById(R.id.add_btn);
+        drink_title = findViewById(R.id.input_text);
     }
     /*
     * Then the soft keyboard is explicitly shown, allowing the user to type in a value.
@@ -97,6 +103,19 @@ public class WaterAdd extends AppCompatActivity {
         initializeView();
         // SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
+        Context context = getApplicationContext();
+        SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("records", Context.MODE_PRIVATE, null);
+        DBHelper dbHelper = new DBHelper(sqLiteDatabase, context);
+        ArrayList<ListAdapter> records = dbHelper.readRecords();
+        // Add button
+        add_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String amount = amountNumb.getText().toString();
+                String time = time_view.getText().toString();
+                String title = drink_title.getText().toString();
+            }
+        });
         //seek bar
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

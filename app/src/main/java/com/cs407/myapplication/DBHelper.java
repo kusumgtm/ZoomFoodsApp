@@ -1,5 +1,6 @@
 package com.cs407.myapplication;
 
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -10,11 +11,17 @@ import java.util.ArrayList;
 * */
 public class DBHelper {
     static SQLiteDatabase sqLiteDatabase;
-    public DBHelper (SQLiteDatabase sqLiteDatabase) { this.sqLiteDatabase = sqLiteDatabase; }
+    private Context context;
+    public DBHelper (SQLiteDatabase sqLiteDatabase, Context context) {
+        this.sqLiteDatabase = sqLiteDatabase;
+        this.context = context;
+    }
 
     public static void createTable(){
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS records "+
                 "(id INTEGER PRIMARY KEY, time TEXT, amount TEXT, title TEXT)");
+
+        //use integer column to set username
     }
 
     public ArrayList<ListAdapter> readRecords(){
