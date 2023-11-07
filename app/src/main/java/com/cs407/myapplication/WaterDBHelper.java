@@ -9,10 +9,10 @@ import java.util.ArrayList;
 /*
 * Perform all the CRUD operations related to database required for our application
 * */
-public class DBHelper {
+public class WaterDBHelper {
     static SQLiteDatabase sqLiteDatabase;
     private Context context;
-    public DBHelper (SQLiteDatabase sqLiteDatabase, Context context) {
+    public WaterDBHelper (SQLiteDatabase sqLiteDatabase, Context context) {
         this.sqLiteDatabase = sqLiteDatabase;
         this.context = context;
     }

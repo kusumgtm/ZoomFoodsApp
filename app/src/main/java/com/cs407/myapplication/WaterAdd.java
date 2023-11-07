@@ -105,7 +105,7 @@ public class WaterAdd extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
         Context context = getApplicationContext();
         SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("records", Context.MODE_PRIVATE, null);
-        DBHelper dbHelper = new DBHelper(sqLiteDatabase, context);
+        WaterDBHelper dbHelper = new WaterDBHelper(sqLiteDatabase, context);
         ArrayList<ListAdapter> records = dbHelper.readRecords();
         // Add button
         add_btn.setOnClickListener(new View.OnClickListener() {

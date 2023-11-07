@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
         Context context = getApplicationContext();
         SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("records", Context.MODE_PRIVATE, null);
-        DBHelper dbHelper = new DBHelper(sqLiteDatabase, getApplicationContext());
+        WaterDBHelper dbHelper = new WaterDBHelper(sqLiteDatabase, getApplicationContext());
         // readRecords
         ArrayList<ListAdapter> records = dbHelper.readRecords();
         // Create an ArrayList<String> object for iterating over records
