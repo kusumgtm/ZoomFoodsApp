@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ public class WaterAdd extends AppCompatActivity {
     ImageView pencil_btn;
     TextView time_view;
     ImageView add_btn;
+    private int recordId = -1;
     /*
     *  Update the seekbar based on users's input
     * */
@@ -106,7 +108,19 @@ public class WaterAdd extends AppCompatActivity {
         Context context = getApplicationContext();
         SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("records", Context.MODE_PRIVATE, null);
         WaterDBHelper dbHelper = new WaterDBHelper(sqLiteDatabase, context);
-        ArrayList<ListAdapter> records = dbHelper.readRecords();
+        ArrayList<Record> records = dbHelper.readRecords();
+        // Initialize class variable noteid with the value from intent
+        recordId = getIntent().getIntExtra("recordId", -1);
+        if (recordId != -1){
+            Record record = records.get(recordId);
+            String time = record.getTime();
+            String amount = record.getAmount();
+            String title = record.getTitle();
+            time_view.setText(time);
+            drink_title.setText(title);
+            time_view.setText(amount);
+
+        }
         // Add button
         add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,6 +128,15 @@ public class WaterAdd extends AppCompatActivity {
                 String amount = amountNumb.getText().toString();
                 String time = time_view.getText().toString();
                 String title = drink_title.getText().toString();
+                if(recordId == -1){
+                    dbHelper.saveRecord(time, amount, title);
+                }
+                else {
+                    dbHelper.updateRecord(time, amount, title, time, amount, title);
+                }
+                Intent intent = new Intent(WaterAdd.this, MainActivity.class);
+                startActivity(intent);
+
             }
         });
         //seek bar

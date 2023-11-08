@@ -24,21 +24,21 @@ public class WaterDBHelper {
         //use integer column to set username
     }
 
-    public ArrayList<ListAdapter> readRecords(){
+    public ArrayList<Record> readRecords(){
         createTable();
         Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM records", null);
         int timeIndex = c.getColumnIndex("time");
         int amountIndex = c.getColumnIndex("amount");
         int titleIndex = c.getColumnIndex("title");
         c.moveToFirst();
-        ArrayList<ListAdapter> recordList = new ArrayList<>();
+        ArrayList<Record> recordList = new ArrayList<>();
         while(!c.isAfterLast()){
             String time = c.getString(timeIndex);
             String title = c.getString(titleIndex);
             String amount = c.getString(amountIndex);
-
-            ListAdapter record = new ListAdapter(time, amount,  title);
+            Record record = new Record(time, amount,  title);
             recordList.add(record);
+            c.moveToNext();
         }
         c.close();
         return recordList;

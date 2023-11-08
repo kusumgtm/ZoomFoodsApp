@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -34,16 +35,24 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("records", Context.MODE_PRIVATE, null);
         WaterDBHelper dbHelper = new WaterDBHelper(sqLiteDatabase, getApplicationContext());
         // readRecords
-        ArrayList<ListAdapter> records = dbHelper.readRecords();
+        ArrayList<Record> records = dbHelper.readRecords();
         // Create an ArrayList<String> object for iterating over records
         ArrayList<String> displayRecords = new ArrayList<>();
-        for(ListAdapter record: records){
+        for(Record record: records){
             displayRecords.add(String.format("Time:%s\nTitle:%s\n", record.getTime(), record.getTitle()));
         }
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, displayRecords);
         recordsListView.setAdapter(adapter);
-
+        // ListView onClickListener
+        recordsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(context, WaterAdd.class);
+                intent.putExtra("recordId", position);
+                startActivity(intent);
+            }
+        });
         add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         ProgressBar progressBar = findViewById(R.id.circularProgressbar);
         progressBar.setProgress(63);
 
-        List<ListAdapter> items = new ArrayList<ListAdapter>();
+        List<Record> items = new ArrayList<Record>();
 
     }
 }
