@@ -33,6 +33,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class WaterAdd extends AppCompatActivity {
+    private String username = "username1";
     AppCompatSeekBar seekBar;
     EditText amountNumb;
     EditText drink_title;
@@ -88,10 +89,15 @@ public class WaterAdd extends AppCompatActivity {
         int min = currentDate.get(Calendar.MINUTE);
 
         TimePickerDialog dialog = new TimePickerDialog(this, R.style.DialogTheme, new TimePickerDialog.OnTimeSetListener() {
+            String hour_string = "";
+            String minute_string = "";
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                if(hour < 10) time_view.setText("0"+ hourOfDay+" : "+minute);
-                time_view.setText(hourOfDay+" : "+minute);
+                if(hourOfDay < 10) hour_string = "0"+ hourOfDay;
+                else hour_string = ""+ hourOfDay;
+                if(minute < 10)  minute_string = "0" + minute;
+                else minute_string = "" + minute;
+                time_view.setText(hour_string+" : "+minute_string);
             }
         }, hour, min, true);
 
@@ -108,7 +114,7 @@ public class WaterAdd extends AppCompatActivity {
         Context context = getApplicationContext();
         SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("records", Context.MODE_PRIVATE, null);
         WaterDBHelper dbHelper = new WaterDBHelper(sqLiteDatabase, context);
-        ArrayList<Record> records = dbHelper.readRecords();
+        ArrayList<Record> records = dbHelper.readRecords(username);
         // Initialize class variable noteid with the value from intent
         recordId = getIntent().getIntExtra("recordId", -1);
         if (recordId != -1){
@@ -118,8 +124,9 @@ public class WaterAdd extends AppCompatActivity {
             String title = record.getTitle();
             time_view.setText(time);
             drink_title.setText(title);
-            time_view.setText(amount);
+            amountNumb.setText(amount);
 
+            updateSeekBarBasedOnInput(amount);
         }
         // Add button
         add_btn.setOnClickListener(new View.OnClickListener() {
@@ -129,10 +136,14 @@ public class WaterAdd extends AppCompatActivity {
                 String time = time_view.getText().toString();
                 String title = drink_title.getText().toString();
                 if(recordId == -1){
-                    dbHelper.saveRecord(time, amount, title);
+                    dbHelper.saveRecord(username, time, amount, title);
                 }
                 else {
-                    dbHelper.updateRecord(time, amount, title, time, amount, title);
+                    //Log.i("Information update time", time);
+                    //Log.i("Information update amount", amount);
+                    //Log.i("Information update title", title);
+                    //Log.i("Information update recordId", String.valueOf(recordId+1));
+                    dbHelper.updateRecord(username, time, amount, title, recordId+1);
                 }
                 Intent intent = new Intent(WaterAdd.this, MainActivity.class);
                 startActivity(intent);

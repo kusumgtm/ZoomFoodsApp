@@ -19,14 +19,14 @@ public class WaterDBHelper {
 
     public static void createTable(){
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS records "+
-                "(id INTEGER PRIMARY KEY, time TEXT, amount TEXT, title TEXT)");
+                "(id INTEGER PRIMARY KEY, username TEXT, time TEXT, amount TEXT, title TEXT)");
 
         //use integer column to set username
     }
 
-    public ArrayList<Record> readRecords(){
+    public ArrayList<Record> readRecords(String username){
         createTable();
-        Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM records", null);
+        Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM records WHERE username=?", new String[]{username});
         int timeIndex = c.getColumnIndex("time");
         int amountIndex = c.getColumnIndex("amount");
         int titleIndex = c.getColumnIndex("title");
@@ -44,21 +44,21 @@ public class WaterDBHelper {
         return recordList;
     }
 
-    public void saveRecord(String time, String amount, String title){
+    public void saveRecord(String username, String time, String amount, String title){
         createTable();
-        sqLiteDatabase.execSQL("INSERT INTO records (time, amount, title) VALUES (?, ?, ?)",
-                new String[]{time, amount, title});
+        sqLiteDatabase.execSQL("INSERT INTO records (username, time, amount, title) VALUES (?, ?, ?, ?)",
+                new String[]{username, time, amount, title});
     }
 
-    public void updateRecord(String time, String amount, String title, String original_time, String original_amount, String original_title){
+    public void updateRecord(String username, String time, String amount, String title, int id){
         createTable();
-        sqLiteDatabase.execSQL("UPDATE records set time=?, amount=?, title=? where time=? AND amount=? AND title=?",
-                new String[]{time, amount, title, original_time, original_amount, original_title});
+        sqLiteDatabase.execSQL("UPDATE records set time=?, amount=?, title=? where username=? AND id=?",
+                new String[]{time, amount, title, username, String.valueOf(id)});
     }
 
-    public void deleteRecord(String time, String amount, String title){
+    public void deleteRecord(String username, int id){
         createTable();
-        sqLiteDatabase.execSQL("DELETE FROM records WHERE time=? AND amount=? AND title=?",
-            new String[]{time, amount, title});
+        sqLiteDatabase.execSQL("DELETE FROM records WHERE username=? AND id=?",
+            new String[]{username, String.valueOf(id)});
     }
 }

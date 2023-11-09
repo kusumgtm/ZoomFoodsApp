@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -134,18 +135,18 @@
                 android:text="Today's record"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="17sp"
+                android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@id/circularProgressbar"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginLeft="25dp"
                 />
 
-            <ListView
+            <com.cs407.myapplication.NonScrollListView
                 android:id = "@+id/recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/record"
-                app:layout_constraintStart_toStartOf="@id/record"
+                app:layout_constraintStart_toStartOf="parent"
                 android:paddingHorizontal="16dp"
             />
 

@@ -1,20 +1,15 @@
 package com.cs407.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import java.util.ArrayList;
@@ -28,21 +23,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // initialize views
         ImageView add_btn =findViewById(R.id.manual_button);
-        ListView recordsListView = (ListView) findViewById(R.id.recyclerview);
-        // SharedPreference. Get SQLiteDatabase Instance
-        SharedPreferences sharedPreferences = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
+        NonScrollListView recordsListView = findViewById(R.id.recyclerview);
         Context context = getApplicationContext();
         SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("records", Context.MODE_PRIVATE, null);
         WaterDBHelper dbHelper = new WaterDBHelper(sqLiteDatabase, getApplicationContext());
         // readRecords
-        ArrayList<Record> records = dbHelper.readRecords();
-        // Create an ArrayList<String> object for iterating over records
-        ArrayList<String> displayRecords = new ArrayList<>();
-        for(Record record: records){
-            displayRecords.add(String.format("Time:%s\nTitle:%s\n", record.getTime(), record.getTitle()));
-        }
+        ArrayList<Record> records = dbHelper.readRecords("username1");
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, displayRecords);
+        ArrayAdapter adapter = new CustomListAdapter(this, records);
         recordsListView.setAdapter(adapter);
         // ListView onClickListener
         recordsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
