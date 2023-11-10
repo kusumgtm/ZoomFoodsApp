@@ -11,14 +11,14 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Tertiary brand color. -->
         <item name="colorTertiary">@color/greyLavender</item>
-        <item name="colorOnTertiaryFixedVariant">@color/lavender</item>
+        <item name="colorOnTertiaryFixedVariant">@color/greyViolet</item>
         <item name="colorOnTertiary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Error color. -->
-        <item name="colorError">@color/coolSalmon</item>
+        <item name="colorError">@color/orangeRedTone</item>
 
-        <item name="colorAccent">@color/coolYellow</item>
+        <item name="colorAccent">@color/pastelYellow</item>
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>

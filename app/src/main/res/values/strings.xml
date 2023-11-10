@@ -1,4 +1,11 @@
 <resources>
+
+    <!-- activity_Welcome strings -->
+    <string name="welcome">"Welcome!"</string>
+    <string name="food_quote">"First we eat, then we do everything else" -M.F.K. Fisher</string>
+
+    <!-- activity_Calendar strings -->
+    <string name="Calendar">Calendar</string>
     <string name="app_name">ZoomFoods</string>
     <string name="primary_color">Primary color</string>
     <string name="primary_color_variant">Primary color var</string>
@@ -22,16 +29,16 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
+
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello Blank Fragment</string>
     <string name="Zoom_Foods">Zoom Foods</string>
     <string name="menu_label_Learn_More">Learn More</string>
     <string name="menu_label_About_Us">About Us</string>
     <string name="menu_label_Contact_Us">Contact Us</string>
+    <!-- General/Shared strings -->
     <string name="login">Log in</string>
     <string name="keep_me_signed_in">Keep Me Signed In</string>
     <string name="username">Username</string>
@@ -41,7 +48,8 @@
     <string name="email_address">Email Address</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="register">Register</string>
-    <string name="food_quote">"First we eat, then we do everything else" -M.F.K. Fisher</string>
 
+    <!-- Strings related to Dashboard -->
+    <string name="dashboard">Dashboard</string>
 
 </resources>

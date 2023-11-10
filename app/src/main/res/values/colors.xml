@@ -5,17 +5,11 @@
     <color name="greyBlue">#BCD7E7</color>
     <color name="greyViolet">#BCCDE7</color>
     <color name="greyLavender">#BCC2E7</color>
-    <color name="lavender">#C1BCE7</color>
-    <color name="coolSalmon">#E7BCC2</color>
-    <color name="coolYellow">#E7E1BC</color>
     <color name="shadeGreyBlue">#A5BCCA</color>
     <color name="tintGreyBlue">#D5DEE8</color>
     <color name="shadeDeepGreyBlue">#5E6C73</color>
     <color name="shadeDarkDeepGreyBlue">#475157</color>
     <color name="greyBlueCool">#ACBDD0</color>
-    <color name="Eggplant">#8067A0</color>
-    <color name="ToneVioletBlue">#7D6FAA</color>
-    <color name="lightSilverVioletBlue">#BEB7D4</color>
     <color name="pastelYellow">#FFEF7B</color>
     <color name="yellowOlive">#80773D</color>
     <color name="tonePastelYellow">#9F9B7E</color>
@@ -23,5 +17,8 @@
     <color name="orangeRedTone">#D31723</color>
     <color name="transTintGreyBlue">#BED5DEE8</color>
     <color name="transGreyBlueCool">#BEACBDD0</color>
+    <color name="transGreyLavender">#BEBCC2E7</color>
+    <color name="transGreyViolet">#BEBCCDE7</color>
+    <color name="neutralPaleOrange">#BFE7D6BC</color>
 
 </resources>
