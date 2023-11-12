@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="holo_blue_light">#FF33B5E5</color>
+    <color name="holo_green_light">#FF99CC00</color>
+    <color name="holo_red_light">#FFFF4444</color>
+    <color name="sixty_opacity_white">#8CFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">My Application</string>
+    <style name="Base.Theme.MyApplication" parent="Theme.AppCompat.Light.NoActionBar">
+        
+        
+    </style>
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/holo_blue_light</item>
+    </style>
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication"/>
+</resources>

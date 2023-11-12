@@ -20,5 +20,6 @@
     <color name="transGreyLavender">#BEBCC2E7</color>
     <color name="transGreyViolet">#BEBCCDE7</color>
     <color name="neutralPaleOrange">#BFE7D6BC</color>
+    <color name="holo_blue_light">#FF33B5E5</color>
 
 </resources>

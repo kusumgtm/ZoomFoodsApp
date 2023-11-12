@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_top_waves.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\top_waves.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_ic_water_cup.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\ic_water_cup.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_edit_pencil.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\edit_pencil.xml"
+    },
+    {
+        "merged": "com.cs407.myapplication.app-merged_res-32:/layout_water_main.xml.flat",
+        "source": "com.cs407.myapplication.app-main-34:/layout/water_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_delete_btn.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\delete_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_button_add.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\button_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_roundedbutton.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\roundedbutton.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_seekbar_progress.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\seekbar_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_custom_progressbar.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\custom_progressbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\drawable_seekbar_thumb.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\drawable\\seekbar_thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\layout_list_item.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\layout\\list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\layout_add_water.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\layout\\add_water.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-merged_res-32:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\tnguy\\.gradle\\daemon\\8.0\\com.cs407.myapplication.app-main-34:\\layout\\activity_main.xml"
+    }
+]
