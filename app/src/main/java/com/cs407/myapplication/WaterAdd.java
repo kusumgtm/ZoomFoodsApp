@@ -40,7 +40,9 @@ public class WaterAdd extends AppCompatActivity {
     ImageView pencil_btn;
     TextView time_view;
     ImageView add_btn;
+    ImageView delete_btn;
     private int recordId = -1;
+    private int recordIndex = -1;
     /*
     *  Update the seekbar based on users's input
     * */
@@ -62,6 +64,7 @@ public class WaterAdd extends AppCompatActivity {
         pencil_btn = findViewById(R.id.pencil);
         time_view = findViewById(R.id.time_button);
         add_btn = findViewById(R.id.add_btn);
+        delete_btn = findViewById(R.id.delete_btn);
         drink_title = findViewById(R.id.input_text);
     }
     /*
@@ -109,24 +112,31 @@ public class WaterAdd extends AppCompatActivity {
         this.setContentView(layout.add_water);
         // find view
         initializeView();
-        // SharedPreferences
-        SharedPreferences sharedPreferences = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
         Context context = getApplicationContext();
         SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("records", Context.MODE_PRIVATE, null);
         WaterDBHelper dbHelper = new WaterDBHelper(sqLiteDatabase, context);
         ArrayList<Record> records = dbHelper.readRecords(username);
         // Initialize class variable noteid with the value from intent
         recordId = getIntent().getIntExtra("recordId", -1);
+        recordIndex = getIntent().getIntExtra("recordIndex", -1);
+        //Log.i("Information", "recordId" + recordId);
         if (recordId != -1){
             Record record = records.get(recordId);
             String time = record.getTime();
             String amount = record.getAmount();
             String title = record.getTitle();
+
             time_view.setText(time);
             drink_title.setText(title);
             amountNumb.setText(amount);
-
+            Log.i("Information", amount);
             updateSeekBarBasedOnInput(amount);
+        }
+        else{
+            seekBar.setProgress(100);
+            seekBar.setMax(100);
+            seekBar.setProgress(0);
+            Log.i("Information", "current: "+ seekBar.getProgress());
         }
         // Add button
         add_btn.setOnClickListener(new View.OnClickListener() {
@@ -142,12 +152,23 @@ public class WaterAdd extends AppCompatActivity {
                     //Log.i("Information update time", time);
                     //Log.i("Information update amount", amount);
                     //Log.i("Information update title", title);
-                    //Log.i("Information update recordId", String.valueOf(recordId+1));
-                    dbHelper.updateRecord(username, time, amount, title, recordId+1);
+                    //Log.i("Information update recordId", String.valueOf(recordIndex));
+                    dbHelper.updateRecord(username, time, amount, title, recordIndex);
                 }
                 Intent intent = new Intent(WaterAdd.this, MainActivity.class);
                 startActivity(intent);
 
+            }
+        });
+        // delete button
+        delete_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Log.i("Information", username);
+                //Log.i("Information", (recordIndex)+"");
+                dbHelper.deleteRecord(username, recordIndex);
+                Intent intent = new Intent(WaterAdd.this, MainActivity.class);
+                startActivity(intent);
             }
         });
         //seek bar

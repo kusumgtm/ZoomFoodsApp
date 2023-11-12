@@ -3,6 +3,7 @@ package com.cs407.myapplication;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -30,13 +31,17 @@ public class WaterDBHelper {
         int timeIndex = c.getColumnIndex("time");
         int amountIndex = c.getColumnIndex("amount");
         int titleIndex = c.getColumnIndex("title");
+        int idIndex = c.getColumnIndex("id");
+
         c.moveToFirst();
         ArrayList<Record> recordList = new ArrayList<>();
         while(!c.isAfterLast()){
+            int id = c.getInt(idIndex);
+            //Log.i("Information", "From DB, id: " + id);
             String time = c.getString(timeIndex);
             String title = c.getString(titleIndex);
             String amount = c.getString(amountIndex);
-            Record record = new Record(time, amount,  title);
+            Record record = new Record(id, time, amount,  title);
             recordList.add(record);
             c.moveToNext();
         }

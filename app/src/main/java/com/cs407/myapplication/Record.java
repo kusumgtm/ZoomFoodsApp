@@ -10,12 +10,14 @@ public class Record  {
    String amount;
 
    String title;
+   Integer id;
 
 
-    public Record(String time_stamp, String amount, String title) {
+    public Record(Integer id, String time_stamp, String amount, String title) {
         this.time_stamp = time_stamp;
         this.amount = amount;
         this.title = title;
+        this.id = id;
     }
 
     public String getTime() {
@@ -29,4 +31,6 @@ public class Record  {
     public String getTitle(){
         return title;
     }
+
+    public Integer getId() {return id; }
 }
