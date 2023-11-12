@@ -17,7 +17,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityWater extends AppCompatActivity {
     private double currrent_total = 0;
     private int current_progtress = 0;
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.water_main);
         initializeViews();
         Context context = getApplicationContext();
         SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("records", Context.MODE_PRIVATE, null);
@@ -64,11 +64,11 @@ public class MainActivity extends AppCompatActivity {
         add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(MainActivity.this, WaterAdd.class);
+                Intent intent =new Intent(ActivityWater.this, WaterAdd.class);
                 startActivity(intent);
             }
         });
-        // Progress Bar
+        // Progress Bar, percentage text
         for (Record record: records){
             currrent_total += Double.parseDouble(record.getAmount());
         }

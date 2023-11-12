@@ -1,34 +1,23 @@
 package com.cs407.myapplication;
 
-import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.TimePicker;
-
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatSeekBar;
-
 import com.cs407.myapplication.R.layout;
-
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -155,7 +144,7 @@ public class WaterAdd extends AppCompatActivity {
                     //Log.i("Information update recordId", String.valueOf(recordIndex));
                     dbHelper.updateRecord(username, time, amount, title, recordIndex);
                 }
-                Intent intent = new Intent(WaterAdd.this, MainActivity.class);
+                Intent intent = new Intent(WaterAdd.this, ActivityWater.class);
                 startActivity(intent);
 
             }
@@ -167,7 +156,7 @@ public class WaterAdd extends AppCompatActivity {
                 //Log.i("Information", username);
                 //Log.i("Information", (recordIndex)+"");
                 dbHelper.deleteRecord(username, recordIndex);
-                Intent intent = new Intent(WaterAdd.this, MainActivity.class);
+                Intent intent = new Intent(WaterAdd.this, ActivityWater.class);
                 startActivity(intent);
             }
         });
