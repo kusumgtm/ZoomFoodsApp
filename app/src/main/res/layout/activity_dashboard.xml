@@ -9,10 +9,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/navLinear"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -55,6 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:background="@color/material_dynamic_primary20" />
+
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
@@ -65,6 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:background="@color/material_dynamic_secondary20" />
+
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
@@ -75,54 +76,74 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:background="@color/material_dynamic_tertiary20" />
+
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
+
                 <Button
                     android:id="@+id/btnGoToNewRecipes"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="New Recipes!"
                     tools:ignore="HardcodedText" />
+
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
+
                 <Button
                     android:id="@+id/btnGotoProfile"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="Edit Profile"
                     tools:ignore="HardcodedText" />
+
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
+
                 <Button
                     android:id="@+id/btnGotoViewProfile"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="View Profile"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText" />
+
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
+
                 <Button
                     android:id="@+id/btnGoToPrivacy"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="Privacy Settings"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText" />
+
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
+
                 <Button
                     android:id="@+id/btnGoToPayments"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="Payments"
                     tools:ignore="HardcodedText" />
+
             </LinearLayout>
         </ScrollView>
-
     </LinearLayout>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navLinear"
+        android:name="com.cs407.zoomfoods.linearNav"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/material_dynamic_primary80"
+        android:visibility="visible"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

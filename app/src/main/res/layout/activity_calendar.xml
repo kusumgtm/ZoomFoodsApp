@@ -47,5 +47,15 @@
             android:foregroundGravity="center_horizontal"
             />
     </LinearLayout>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navLinear"
+        android:name="com.cs407.zoomfoods.linearNav"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/material_dynamic_primary80"
+        android:visibility="visible"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
