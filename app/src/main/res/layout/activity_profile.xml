@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     tools:context=".Profile">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
+        android:padding="10sp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="22dp">
 
         <Space
             android:id="@+id/spacerTipTop"
@@ -24,7 +24,7 @@
             android:id="@+id/strCustomerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/customer_first_name_middle_names_last_name"
+            android:text="@string/customerName"
             android:textAlignment="textStart"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -60,7 +60,7 @@
                     android:id="@+id/txtCustomerName"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="@string/customer_name"
+                    android:text="@string/customerName"
                     android:autofillHints="Full Name"
                     android:inputType="text"
                     tools:ignore="LabelFor" />
@@ -71,7 +71,7 @@
                     android:layout_height="50dp"
                     android:ems="10"
                     android:inputType="date"
-                    android:text="@string/date_of_birth"
+                    android:text="@string/dateOfBirth"
                     android:autofillHints="Date of Birth"
                     tools:ignore="LabelFor" />
 
@@ -81,7 +81,7 @@
                     android:layout_height="50dp"
                     android:ems="10"
                     android:inputType="phone"
-                    android:text="@string/set_phone_number"
+                    android:text="@string/phoneNumber"
                     android:autofillHints="Phone Number"
                     tools:ignore="LabelFor" />
 
@@ -89,7 +89,7 @@
                     android:id="@+id/txtSNS"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="@string/set_social_media_acct"
+                    android:text="@string/socialMediaAccount"
                     android:autofillHints="Connect to a Social Networking Site"
                     android:inputType="text"
                     tools:ignore="LabelFor" />
@@ -100,7 +100,7 @@
                     android:layout_height="50dp"
                     android:ems="10"
                     android:inputType="textEmailAddress"
-                    android:text="@string/set_email"
+                    android:text="@string/email_address"
                     android:autofillHints="Fill in email"
                     tools:ignore="LabelFor" />
 
@@ -110,7 +110,7 @@
                     android:layout_height="50dp"
                     android:ems="10"
                     android:inputType="textPassword"
-                    android:text="@string/change_password"
+                    android:text="@string/changePassword"
                     android:autofillHints="Change Password"
                     tools:ignore="LabelFor" />
             </LinearLayout>
@@ -125,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
-            android:text="@string/confirm_changes" />
+            android:text="@string/confirmChanges" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,6 +29,7 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome_back">Welcome Back</string>
 
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
@@ -51,5 +52,32 @@
 
     <!-- Strings related to Dashboard -->
     <string name="dashboard">Dashboard</string>
+
+    <!-- Strings related to Profile -->
+    <string name="customerName">Customer Name</string>
+    <string name="dateOfBirth">Date of Birth</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="socialMediaAccount">Social Media</string>
+    <string name="changePassword">Change Password</string>
+    <string name="confirmChanges">Confirm Changes</string>
+
+    <!-- Strings related to Water Intake -->
+    <string name="Drink_header">Today I still need to drink 23 oz</string>
+    <string name="intake">INTAKE</string>
+    <string name="target">TARGET</string>
+    <string name="record">Today\'s record</string>
+    <string name="quick_add">Quick add</string>
+    <string name="amount">Amount:</string>
+    <string name="drink_type">Type of Drink:</string>
+    <string name="Tea">Tea</string>
+    <string name="Coffee">Coffee</string>
+    <string name="Milk">Milk</string>
+    <string name="Juice">Juice</string>
+    <string name="Soda">Soda</string>
+    <string name="Beer">Beer</string>
+
+
+
+
 
 </resources>

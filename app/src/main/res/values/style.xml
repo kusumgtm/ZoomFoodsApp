@@ -5,8 +5,12 @@
         <item name="colorPrimary">@color/transTintGreyBlue</item>
         <item name="android:textColorPrimary">@color/shadeDarkDeepGreyBlue</item>
         <item name="android:fontFamily">@font/vollkorn_semibold</item>
-    </style>
 
+    </style>
+    <style name="CustomCalenderMonth" parent="android:TextAppearance.DeviceDefault.Medium">
+        <item name="android:textColor">@color/shadeDarkDeepGreyBlue</item>
+        <item name="android:fontFamily">@font/vollkorn_semibold</item>
+    </style>
     <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
         <item name="android:textColor">@color/shadeDeepGreyBlue</item>
         <item name="android:fontFamily">@font/vollkorn_semibold</item>

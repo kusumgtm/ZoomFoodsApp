@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="5sp"
+    android:layout_margin="10sp"
     android:background="@color/transTintGreyBlue"
     tools:context=".Calendar">
 
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
         <!-- Add TextView to display the date -->
         <TextView
-            android:id="@+id/date_view"
+            android:id="@+id/dateView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="150dp"
@@ -37,15 +37,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="5sp"
+            android:layout_marginTop="20sp"
             android:layout_marginRight="5sp"
-            android:layout_marginTop="30sp"
             android:layout_marginBottom="70sp"
-            android:dateTextAppearance="@style/CalenderViewDateCustomText"
-            android:theme="@style/CalenderViewCustom"
-            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
             android:background="@color/transGreyViolet"
+            android:dateTextAppearance="@style/CalenderViewDateCustomText"
+            android:focusedMonthDateColor="@color/shadeDeepGreyBlue"
             android:foregroundGravity="center_horizontal"
-            />
+            android:theme="@style/CalenderViewCustom"
+            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

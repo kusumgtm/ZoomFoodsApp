@@ -2,12 +2,6 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/amaranth</item>
-        <item>@font/cambo</item>
-        <item>@font/cuprum</item>
-        <item>@font/cuprum_italic</item>
-        <item>@font/elsie</item>
-        <item>@font/farsan</item>
-        <item>@font/gelasio_italic</item>
         <item>@font/vollkorn_semibold</item>
     </array>
 </resources>

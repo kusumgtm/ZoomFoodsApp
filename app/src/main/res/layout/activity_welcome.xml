@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
-    android:background="@drawable/plate_background"
-    tools:context=".MainActivity">
+    android:background="@drawable/coffee_with_plate"
+    tools:context=".Welcome">
     <include
         layout="@layout/custom_status_bar"
         android:layout_width="match_parent"
